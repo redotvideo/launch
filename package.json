@@ -1,0 +1,29 @@
+{
+  "name": "ph-launch",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "start": "vite",
+    "serve": "vite",
+    "build": "tsc && vite build",
+    "render": "tsc && node dist/render.js"
+  },
+  "dependencies": {
+    "@codemirror/theme-one-dark": "^6.1.2",
+    "@lezer/javascript": "^1.4.17",
+    "@revideo/2d": "0.4.8-alpha.1036+f2f2a1b1",
+    "@revideo/core": "0.4.8-alpha.1036+f2f2a1b1",
+    "@revideo/ffmpeg": "0.4.8-alpha.1036+f2f2a1b1",
+    "@revideo/renderer": "0.4.8-alpha.1036+f2f2a1b1",
+    "@revideo/vite-plugin": "0.4.8-alpha.1036+f2f2a1b1",
+    "@uiw/codemirror-theme-vscode": "^4.23.0",
+    "i": "^0.3.7",
+    "npm": "^10.8.2"
+  },
+  "devDependencies": {
+    "@revideo/cli": "0.4.8-alpha.1036+f2f2a1b1",
+    "@revideo/ui": "0.4.8-alpha.1036+f2f2a1b1",
+    "typescript": "^5.2.2",
+    "vite": "^4.5"
+  }
+}
