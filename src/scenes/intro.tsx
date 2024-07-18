@@ -95,7 +95,7 @@ export default makeScene2D(function* (view) {
 
   view.add(
     <>
-      <Audio src={"/audio.wav"} time={0.4} volume={0.7} play={true} playbackRate={1.1}/>
+      <Audio src={"/audio.wav"} time={0.4} volume={1.0} play={true} playbackRate={1.1}/>
       <Rect size={["100%", "100%"]} fill="#F5F5F5" ref={backgroundRef}/>
     </>,
   );
@@ -165,7 +165,7 @@ export default makeScene2D(function* (view) {
 
   view.add(
     <>
-      <Img ref={githubRef} src={"/screenshot.png"} y={100} width={"1%"} zIndex={2}/>
+      <Img ref={githubRef} src={"/screenshot5.png"} y={100} width={"1%"} zIndex={2}/>
       <Img ref={githubRef2} src={"/screenshot.png"} y={100} width={"1%"} zIndex={1}/>
       <Txt ref={githubLinkRef} y={-360} fontFamily={"Lexend"} fontSize={50} fontWeight={600}/>
       <Txt ref={githubLinkRef2} y={-360} fontFamily={"Lexend"} fontSize={50} opacity={0} text={"https://github.com/redotvideo/revideo"} fontWeight={600}/>
@@ -375,6 +375,8 @@ export default makeScene2D(function* (view) {
   videoRef3().play();
 
   yield* waitFor(3);
+
+  videoRef3().pause();
 
   yield* all(
     textRef3().opacity(0, 1),
@@ -633,8 +635,8 @@ const file = renderVideo({
   view.add(
     <>
       <Layout opacity={0} ref={logos}>
-        <Img src={"cloudinary.png"} x={-250} y={350} width={250} shadowBlur={2} shadowColor={"grey"} />
-        <Img src={"moviepy.png"} x={100} y={-350} width={200} shadowBlur={2} shadowColor={"grey"} />
+        <Img src={"cloudinary.png"} x={-300} y={350} width={250} shadowBlur={2} shadowColor={"grey"} />
+        <Img src={"moviepy.png"} x={-100} y={-350} width={200} shadowBlur={2} shadowColor={"grey"} />
         <Img src={"remotion.png"} x={420} y={-100} width={250} shadowBlur={2} shadowColor={"grey"} />
         <Img src={"shotstack.png"} x={100} y={300} width={200} shadowBlur={2} shadowColor={"grey"} />
         <Txt fontFamily={"Lexend"} fontSize={30} y={450} x={680} fontWeight={600} text={"This is based on our opinion.\nPlease don't sue us 🙏"}/>
@@ -735,7 +737,7 @@ const file = renderVideo({
       width={"130%"}
       ref={explosion}
       play={true}
-      time={2.1}
+      time={2.2}
       volume={0.1}
       zIndex={1}
     />
@@ -767,10 +769,10 @@ const file = renderVideo({
 
   yield* all(
     endLogoRef().position.y(-200, 1.5),
-    chain(textRef11().text("Thanks for watching <3", 2.5), waitFor(1), textRef12().text("https://github.com/redotvideo/revideo", 1.5), textRef13().text("https://re.video", 1.5))
+    chain(textRef11().text("Thanks for watching <3", 2), waitFor(0.5), textRef12().text("https://github.com/redotvideo/revideo", 1.5), textRef13().text("https://re.video", 1.5))
   );
 
-  yield* waitFor(15.5);
+  yield* waitFor(16.5);
 });
 
 
@@ -801,7 +803,7 @@ function* playOutroMusic(view: View2D){
         width={"100%"}
         ref={outro}
         play={true}
-        volume={0.0005+i*0.001}
+        volume={0.0005+i*0.0015}
         time={3+i*0.5}
       />
     );
