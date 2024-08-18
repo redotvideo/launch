@@ -1,0 +1,70 @@
+.editor-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.CodeMirror {
+  flex: 1;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+}
+
+.CodeMirror-lines {
+  padding: 10px;
+}
+
+.CodeMirror-gutters {
+  background-color: #282c34;
+  border-right: 1px solid #555;
+}
+
+.CodeMirror-cursor {
+  border-left: 1px solid #fff;
+}
+
+.CodeMirror-linenumber {
+  color: #888;
+}
+
+.CodeMirror-selected {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.CodeMirror-line {
+  color: #abb2bf;
+}
+
+.CodeMirror-matchingbracket {
+  text-decoration: underline;
+  color: #fff !important;
+}
+
+.CodeMirror-nonmatchingbracket {
+  background: none;
+  color: #f00;
+}
+
+.CodeMirror-foldmarker {
+  color: #555;
+  font-family: arial;
+  line-height: .3;
+  cursor: pointer;
+}
+
+.CodeMirror-foldgutter {
+  width: .7em;
+}
+
+.CodeMirror-foldgutter-open,
+.CodeMirror-foldgutter-folded {
+  color: #555;
+}
+
+.CodeMirror-foldgutter-open:after {
+  content: "▾";
+}
+
+.CodeMirror-foldgutter-folded:after {
+  content: "▸";
+}
